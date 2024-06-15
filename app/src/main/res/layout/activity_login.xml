@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".inicio.Login">
+
+  <ImageView
+      android:id="@+id/imageView2"
+      android:layout_width="232dp"
+      android:layout_height="264dp"
+      android:layout_marginTop="32dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/logo" />
+
+  <EditText
+      android:id="@+id/txtCorreo"
+      android:layout_width="300dp"
+      android:layout_height="60dp"
+      android:layout_marginTop="32dp"
+      android:ems="10"
+      android:hint="@string/correo"
+      android:inputType="textEmailAddress"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.495"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+  <EditText
+      android:id="@+id/txtContrasena"
+      android:layout_width="300dp"
+      android:layout_height="60dp"
+      android:layout_marginTop="28dp"
+      android:ems="10"
+      android:hint="@string/contrasena"
+      android:inputType="textPassword"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.495"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtCorreo" />
+
+  <ImageButton
+      android:id="@+id/btnIngresar"
+      android:layout_width="120dp"
+      android:layout_height="60dp"
+      android:layout_marginTop="36dp"
+      android:layout_marginEnd="56dp"
+      android:background="#1E90FF"
+      android:onClick="onClick"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtContrasena"
+      app:srcCompat="@drawable/ingresar_24" />
+
+  <ImageButton
+      android:id="@+id/btnSalir"
+      android:layout_width="120dp"
+      android:layout_height="60dp"
+      android:layout_marginStart="52dp"
+      android:layout_marginTop="36dp"
+      android:background="#32CD32"
+      android:onClick="onClick"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtContrasena"
+      app:srcCompat="@drawable/salir_40" />
+
+  <ImageButton
+      android:id="@+id/btnRegistrar"
+      android:layout_width="120dp"
+      android:layout_height="60dp"
+      android:layout_marginTop="124dp"
+      android:background="#D3D3D3"
+      android:onClick="onClick"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.492"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtContrasena"
+      app:layout_constraintVertical_bias="0.0"
+      app:srcCompat="@drawable/registra_usuario_40" />
+</androidx.constraintlayout.widget.ConstraintLayout>

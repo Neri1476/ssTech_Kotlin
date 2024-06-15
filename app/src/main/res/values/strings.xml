@@ -7,7 +7,23 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!--MainAvtivity - menu de inicio-->
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    <!--Login-->
+    <string name="correo">Correo electrónico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="salir">Salir</string>
+
+    <!--Registrar usuario-->
+    <string name="tituloRegistrarUsuario">Registrar usuario</string>
+    <string name="nombre">Nombre(s)</string>
+    <string name="apellido">Apellido(s)</string>
+    <string name="direccion">Dirección</string>
+    <string name="telefono">Teléfono</string>
+    <string name="registrar">Registrar</string>
+
 </resources>
