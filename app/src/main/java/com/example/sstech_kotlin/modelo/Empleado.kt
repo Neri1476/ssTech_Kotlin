@@ -46,6 +46,10 @@ class Empleado : Usuario {
     companion object {
         val listaEmpleados = mutableListOf<Empleado>()
 
+        fun agregarEmpleado(empleado: Empleado) {
+            Empleado.listaEmpleados.add(empleado)
+        }
+
         fun encontrarEmpleado(correo: String): Empleado? {
             return listaEmpleados.find { it.correo == correo }
         }
