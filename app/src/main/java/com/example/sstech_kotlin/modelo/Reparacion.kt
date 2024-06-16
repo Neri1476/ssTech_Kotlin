@@ -1,5 +1,7 @@
 package com.example.sstech_kotlin.modelo
 
+import android.content.Context
+import android.widget.Toast
 import java.util.Date
 
 class Reparacion
@@ -8,7 +10,7 @@ class Reparacion
     var correo_Cliente: String = ""
     var correo_Empleado: String = ""
     var falla: String = ""
-    var plazo_Entrega: Date = TODO()
+    var plazo_Entrega: Date = Date()
     var costo: Double = 0.0
     var estado: Boolean = false
 
@@ -28,7 +30,7 @@ class Reparacion
 
     }
 
-    // Guarda clientes en una lista
+    // Guarda reparación en una lista (cada cliente debe tener su propio historial)
     companion object
     {
         val listaReparaciones = mutableListOf<Reparacion>()
@@ -38,9 +40,14 @@ class Reparacion
             listaReparaciones.add(reparacion)
         }
 
-        fun mostrarInformacionCliente(correo: String)
+        fun mostrarReparacionCliente(context: Context, correo: String) : List<Reparacion>
         {
-
+            val reparacionesCliente = listaReparaciones.filter { it.correo_Cliente == correo }
+            if (reparacionesCliente.isEmpty())
+            {
+                Toast.makeText(context, "No hay reparaciones para este cliente", Toast.LENGTH_LONG).show()
+            }
+            return reparacionesCliente
         }
     }
 }
