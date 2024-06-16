@@ -46,4 +46,10 @@
         android:name="com.example.sstech_kotlin.ui.reparar.ReparacionesFragment"
         android:label="@string/menu_reparaciones"
         tools:layout="@layout/fragment_reparaciones" />
+
+    <fragment
+        android:id="@+id/nav_componentes"
+        android:name="com.example.sstech_kotlin.ui.componente.ComponentesFragment"
+        android:label="@string/menu_componentes"
+        tools:layout="@layout/fragment_componentes" />
 </navigation>

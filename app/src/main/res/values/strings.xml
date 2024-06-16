@@ -15,6 +15,7 @@
     <string name="menu_acerca">Acerca de ...</string>
     <string name="menu_empleados">Empleados</string>
     <string name="menu_reparaciones">Reparaciones</string>
+    <string name="menu_componentes">Componentes</string>
 
     <string name="datosSstech">Coloquen un texto en el archivo strings.xml</string>
 
@@ -37,6 +38,12 @@
 
     <!--Registrar cita-->
     <string name="registrarCita">Registrar cita</string>
+    <string name="id">Id</string>
+    <string name="correoCliente">Correo cliente</string>
+    <string name="correoEmpleado">Correo emppleado</string>
+    <string name="falla">Falla</string>
+    <string name="plazo">Plazo</string>
+    <string name="costo">Costo</string>
 
     <!--Historial de pedidos-->
     <string name="historialPedidos">Historial de pedidos</string>
@@ -46,4 +53,15 @@
 
     <!--Reparaciones-->
     <string name="reparaciones">Reparaciones</string>
+
+    <!--componentes-->
+    <string name="componentes">Componentes</string>
+    <string name="formularioRegistroComponentes">Agregar componente</string>
+    <string name="formulariobmComponentes">Consultar y modicar componente</string>
+    <string name="idComponente">Id</string>
+    <string name="nombreComponente">Nombre</string>
+    <string name="cantidadStockComponente">Cantidad</string>
+    <string name="precioUnitarioComponente">Precio unitario</string>
+    <string name="proveedorComponente">Proveedor</string>
+
 </resources>

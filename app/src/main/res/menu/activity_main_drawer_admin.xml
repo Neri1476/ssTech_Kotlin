@@ -17,6 +17,10 @@
             android:icon="@drawable/baseline_build_24"
             android:title="@string/menu_reparaciones" />
         <item
+            android:id="@+id/nav_componentes"
+            android:icon="@drawable/baseline_computer_24"
+            android:title="@string/menu_componentes" />
+        <item
             android:id="@+id/nav_acerca"
             android:icon="@drawable/baseline_info_outline_24"
             android:title="@string/menu_acerca" />
