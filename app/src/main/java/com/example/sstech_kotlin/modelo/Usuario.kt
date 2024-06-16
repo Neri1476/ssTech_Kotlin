@@ -1,6 +1,7 @@
 package com.example.sstech_kotlin.modelo
 
-open class Usuario(
+open class Usuario
+    (
     var correo: String,
     var contrasena: String,
     var nombre: String = "",

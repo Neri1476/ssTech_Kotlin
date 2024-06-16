@@ -17,7 +17,7 @@
     <string name="menu_reparaciones">Reparaciones</string>
     <string name="menu_componentes">Componentes</string>
 
-    <string name="datosSstech">Coloquen un texto en el archivo strings.xml</string>
+    <string name="datosSstech">SSTECH es una empresa especializada en la reparación de dispositivos electrónicos y equipos tecnológicos para estudiantes del CETI (Centro de Enseñanza Técnica Industrial) plantel Colomos. La empresa ofrece servicios de mantenimiento y reparación de computadoras portátiles, teléfonos móviles, tabletas y otros dispositivos utilizados por los estudiantes en sus actividades académicas. SSTECH se distingue por su compromiso con la calidad y la rapidez en sus servicios, proporcionando soluciones eficientes a precios accesibles para la comunidad estudiantil. Además, la empresa promueve el aprendizaje práctico, involucrando a estudiantes en programas de pasantías y prácticas profesionales, lo que les permite adquirir experiencia real en el campo de la tecnología y las reparaciones.</string>
 
     <!--Login-->
     <string name="correo">Correo electrónico</string>
@@ -34,14 +34,15 @@
     <string name="registrar">Registrar</string>
 
     <!--Tecnicós-->
-    <string name="tecnicos">Tecnicós</string>
+    <string name="tecnicos">Técnicos</string>
+    <string name="tecnicos_lista">Técnicos disponibles:</string>
 
     <!--Registrar cita-->
     <string name="registrarCita">Registrar cita</string>
     <string name="id">Id</string>
     <string name="correoCliente">Correo cliente</string>
     <string name="correoEmpleado">Correo emppleado</string>
-    <string name="falla">Falla</string>
+    <string name="falla">Falla (Descripción del problema)</string>
     <string name="plazo">Plazo</string>
     <string name="costo">Costo</string>
 
@@ -63,5 +64,4 @@
     <string name="cantidadStockComponente">Cantidad</string>
     <string name="precioUnitarioComponente">Precio unitario</string>
     <string name="proveedorComponente">Proveedor</string>
-
 </resources>
