@@ -53,5 +53,9 @@ class Empleado : Usuario {
         fun encontrarEmpleado(correo: String): Empleado? {
             return listaEmpleados.find { it.correo == correo }
         }
+
+        fun obtenerTodosTecnicos(): List<Empleado> {
+            return Empleado.listaEmpleados
+        }
     }
 }
