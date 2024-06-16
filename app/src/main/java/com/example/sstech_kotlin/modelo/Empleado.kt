@@ -1,6 +1,7 @@
 package com.example.sstech_kotlin.modelo
 
-class Empleado : Usuario {
+class Empleado : Usuario
+{
     var puesto: String
     var especialidad: String
     var horario: String
@@ -17,7 +18,8 @@ class Empleado : Usuario {
         horario: String,
         fechaContratacion: String,
         salario: String
-    ) : super(correo, nombre, apellido, telefono) {
+    ) : super(correo, nombre, apellido, telefono)
+    {
         this.puesto = puesto
         this.especialidad = especialidad
         this.horario = horario
@@ -33,7 +35,8 @@ class Empleado : Usuario {
         especialidad: String,
         horario: String,
         salario: String
-    ) {
+    )
+    {
         this.nombre = nombre
         this.apellido = apellido
         this.telefono = telefono
@@ -43,14 +46,17 @@ class Empleado : Usuario {
         this.salario = salario
     }
 
-    companion object {
+    companion object
+    {
         val listaEmpleados = mutableListOf<Empleado>()
 
-        fun agregarEmpleado(empleado: Empleado) {
+        fun agregarEmpleado(empleado: Empleado)
+        {
             Empleado.listaEmpleados.add(empleado)
         }
 
-        fun encontrarEmpleado(correo: String): Empleado? {
+        fun encontrarEmpleado(correo: String): Empleado?
+        {
             return listaEmpleados.find { it.correo == correo }
         }
     }

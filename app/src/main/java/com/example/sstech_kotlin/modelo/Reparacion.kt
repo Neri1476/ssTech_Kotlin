@@ -14,7 +14,15 @@ class Reparacion
     var costo: Double = 0.0
     var estado: Boolean = false
 
-    constructor(id: String, cliente: String, empleado: String, falla: String, plazo: Date, costo: Double, estado: Boolean)
+    constructor(
+        id: String,
+        cliente: String,
+        empleado: String,
+        falla: String,
+        plazo: Date,
+        costo: Double,
+        estado: Boolean
+    )
     {
         this.idR = id
         this.correo_Cliente = cliente
