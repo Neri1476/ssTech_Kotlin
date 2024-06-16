@@ -49,6 +49,8 @@ class RegistrarUsuario : AppCompatActivity() {
                 apellido.text.toString(), direccion.text.toString(), telefono.text.toString(), fecha)
             Cliente.agregarCliente(nuevoCliente)
 
+            Toast.makeText(this, "Registrado con exito con nombre " + nombre.text.toString(), Toast.LENGTH_SHORT).show()
+
             val intent = Intent(applicationContext, Login::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent)

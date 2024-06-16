@@ -33,29 +33,6 @@ class Login : AppCompatActivity() {
         }
     }
 
-    /*fun ingresar(){
-        if (camposCompletos()) {
-            if (correo.text.toString() == "admin@sstech.mx" && contrasena.text.toString() == "1234") {
-                val intent = Intent(applicationContext, MainActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-                intent.putExtra("user_type", "admin")
-                startActivity(intent)
-            } else {
-                val cliente = Cliente.login(correo.text.toString(), contrasena.text.toString())
-
-                if (cliente != null) {
-                    val intent = Intent(applicationContext, MainActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-                    intent.putExtra("user_type", "client")
-                    startActivity(intent)
-                } else {
-                    Toast.makeText(this, "Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show()
-                }
-            }
-        } else {
-            Toast.makeText(this, "Complete los campos", Toast.LENGTH_SHORT).show()
-        }
-    }*/
     fun ingresar(){
         if (camposCompletos()) {
             val intent = Intent(applicationContext, MainActivity::class.java)

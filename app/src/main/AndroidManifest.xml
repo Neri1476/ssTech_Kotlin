@@ -13,6 +13,12 @@
         android:theme="@style/Theme.SsTech_Kotlin"
         tools:targetApi="31">
         <activity
+            android:name=".ui.componente.FormularioBMComponente"
+            android:exported="false" />
+        <activity
+            android:name=".ui.componente.RegistrarComponente"
+            android:exported="false" />
+        <activity
             android:name=".inicio.RegistrarUsuario"
             android:exported="false" />
         <activity
@@ -28,7 +34,7 @@
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.SsTech_Kotlin.NoActionBar"></activity>
+            android:theme="@style/Theme.SsTech_Kotlin.NoActionBar" />
     </application>
 
 </manifest>

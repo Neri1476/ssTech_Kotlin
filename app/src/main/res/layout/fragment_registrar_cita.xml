@@ -7,16 +7,43 @@
     tools:context=".ui.cita.RegistrarCitaFragment">
 
     <TextView
-        android:id="@+id/text_gallery"
-        android:layout_width="match_parent"
+        android:id="@+id/lblRegistrarCita"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="32dp"
+        android:text="@string/registrarCita"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtDireccion"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/correoCliente"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblRegistrarCita" />
+
+    <EditText
+        android:id="@+id/txtPlazo"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/plazo"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDireccion" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.sstech_kotlin.R
 import com.example.sstech_kotlin.databinding.FragmentRegistrarCitaBinding
 
 class RegistrarCitaFragment : Fragment() {
@@ -28,7 +29,7 @@ class RegistrarCitaFragment : Fragment() {
         _binding = FragmentRegistrarCitaBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
+        val textView: TextView = binding.lblRegistrarCita
         galleryViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
