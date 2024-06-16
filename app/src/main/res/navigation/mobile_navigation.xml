@@ -12,14 +12,38 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.sstech_kotlin.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_registrar_cita"
+        android:name="com.example.sstech_kotlin.ui.cita.RegistrarCitaFragment"
+        android:label="@string/menu_cita"
+        tools:layout="@layout/fragment_registrar_cita" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.sstech_kotlin.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_historial"
+        android:name="com.example.sstech_kotlin.ui.historial.HistorialFragment"
+        android:label="@string/menu_historial"
+        tools:layout="@layout/fragment_historial" />
+
+    <fragment
+        android:id="@+id/nav_tecnicos"
+        android:name="com.example.sstech_kotlin.ui.tecnicos.TecnicosFragment"
+        android:label="@string/menu_tecnicos"
+        tools:layout="@layout/fragment_tecnicos" />
+
+    <fragment
+        android:id="@+id/nav_acerca"
+        android:name="com.example.sstech_kotlin.ui.acerca.AcercaFragment"
+        android:label="@string/menu_acerca"
+        tools:layout="@layout/fragment_acerca" />
+
+    <fragment
+        android:id="@+id/nav_empleados"
+        android:name="com.example.sstech_kotlin.ui.empleado.EmpleadosFragment"
+        android:label="@string/menu_empleados"
+        tools:layout="@layout/fragment_empleados" />
+
+    <fragment
+        android:id="@+id/nav_reparaciones"
+        android:name="com.example.sstech_kotlin.ui.reparar.ReparacionesFragment"
+        android:label="@string/menu_reparaciones"
+        tools:layout="@layout/fragment_reparaciones" />
 </navigation>

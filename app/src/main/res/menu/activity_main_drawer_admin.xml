@@ -9,17 +9,13 @@
             android:icon="@drawable/baseline_home_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_registrar_cita"
-            android:icon="@drawable/baseline_assignment_add_24"
-            android:title="@string/menu_cita" />
+            android:id="@+id/nav_empleados"
+            android:icon="@drawable/baseline_groups_24"
+            android:title="@string/menu_empleados" />
         <item
-            android:id="@+id/nav_historial"
-            android:icon="@drawable/baseline_history_24"
-            android:title="@string/menu_historial" />
-        <item
-            android:id="@+id/nav_tecnicos"
-            android:icon="@drawable/baseline_engineering_24"
-            android:title="@string/menu_tecnicos" />
+            android:id="@+id/nav_reparaciones"
+            android:icon="@drawable/baseline_build_24"
+            android:title="@string/menu_reparaciones" />
         <item
             android:id="@+id/nav_acerca"
             android:icon="@drawable/baseline_info_outline_24"

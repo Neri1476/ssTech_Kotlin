@@ -2,15 +2,21 @@
     <string name="app_name">ssTech_Kotlin</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_title">SSTech</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_desc">Menu de navegación</string>
     <string name="action_settings">Settings</string>
 
     <!--MainAvtivity - menu de inicio-->
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">Menu Principal</string>
+    <string name="menu_cita">Registrar cita</string>
+    <string name="menu_historial">Historial de pedidos</string>
+    <string name="menu_tecnicos">Técnicos</string>
+    <string name="menu_acerca">Acerca de ...</string>
+    <string name="menu_empleados">Empleados</string>
+    <string name="menu_reparaciones">Reparaciones</string>
+
+    <string name="datosSstech">Coloquen un texto en el archivo strings.xml</string>
 
     <!--Login-->
     <string name="correo">Correo electrónico</string>
@@ -26,4 +32,18 @@
     <string name="telefono">Teléfono</string>
     <string name="registrar">Registrar</string>
 
+    <!--Tecnicós-->
+    <string name="tecnicos">Tecnicós</string>
+
+    <!--Registrar cita-->
+    <string name="registrarCita">Registrar cita</string>
+
+    <!--Historial de pedidos-->
+    <string name="historialPedidos">Historial de pedidos</string>
+
+    <!--Empleados-->
+    <string name="empleados">Empleados</string>
+
+    <!--Reparaciones-->
+    <string name="reparaciones">Reparaciones</string>
 </resources>
