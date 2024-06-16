@@ -7,12 +7,11 @@ import java.util.Date
 class Reparacion
 {
     var idR: String = ""
-    var correo_Cliente: String = ""
-    var correo_Empleado: String = ""
-    var falla: String = ""
-    var plazo_Entrega: Date = Date()
-    var costo: Double = 0.0
-    var estado: Boolean = false
+    var correo_Cliente: String = "" //
+    var correo_Empleado: String = "" //
+    var falla: String = "" //
+    var plazo_Entrega: Date = Date() //
+    var estado: Boolean = false //Esta madre la hace el admin
 
     constructor(
         id: String,
@@ -20,7 +19,6 @@ class Reparacion
         empleado: String,
         falla: String,
         plazo: Date,
-        costo: Double,
         estado: Boolean
     )
     {
@@ -29,23 +27,7 @@ class Reparacion
         this.correo_Empleado = empleado
         this.falla = falla
         this.plazo_Entrega = plazo
-        this.costo = costo
         this.estado = estado
-    }
-
-    fun definirPlazo(nuevoPlazo: Date)
-    {
-        this.plazo_Entrega = nuevoPlazo
-    }
-
-    fun actualizarEstado(nuevoEstado: Boolean)
-    {
-        this.estado = nuevoEstado
-    }
-
-    fun asignarEmpleado(nuevoEmpleado: String)
-    {
-        this.correo_Empleado = nuevoEmpleado
     }
 
     // Guarda reparación en una lista (cada cliente debe tener su propio historial)
@@ -56,6 +38,11 @@ class Reparacion
         fun agregarPedido(reparacion: Reparacion)
         {
             listaReparaciones.add(reparacion)
+        }
+
+        fun logitudReparacion() : Int
+        {
+            return Reparacion.listaReparaciones.size
         }
 
         fun mostrarReparacionCliente(context: Context, correo: String) : List<Reparacion>

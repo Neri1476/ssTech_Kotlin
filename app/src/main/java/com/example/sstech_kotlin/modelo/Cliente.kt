@@ -75,7 +75,7 @@ class Cliente : Usuario
             val clienteEncontrado = listaClientes.find { it.correo == correo }
             if (clienteEncontrado != null)
             {
-                println(clienteEncontrado)
+                Toast.makeText(contexto, "Se encontró a ${clienteEncontrado.nombre} con el correo ${clienteEncontrado.correo}", Toast.LENGTH_LONG).show()
             }
             else
             {
