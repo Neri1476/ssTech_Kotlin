@@ -26,11 +26,12 @@ class TecnicosFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val contactoViewModel =
-            ViewModelProvider(this).get(TecnicosViewModel::class.java)
+        val contactoViewModel = ViewModelProvider(this).get(TecnicosViewModel::class.java)
 
         _binding = FragmentTecnicosBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        resultadoTecnicos = binding.lblTodosTecnicos
 
         val textView: TextView = binding.lblTecnicos
         contactoViewModel.text.observe(viewLifecycleOwner) {
@@ -43,10 +44,11 @@ class TecnicosFragment : Fragment() {
     private fun mostrarTodosTecnicos() {
         val empleado = Empleado.obtenerTodosTecnicos()
         val empleadosTexto = empleado.joinToString(separator = "\n") {
-            "Correo: ${it.correo}, Nombre: ${it.nombre}, Apellido: ${it.apellido}, Telefono: ${it.telefono}}"
+            "Correo: ${it.correo}\nNombre: ${it.nombre}\nApellido: ${it.apellido}\nTelefono: ${it.telefono}\n\n"
         }
         resultadoTecnicos.text = empleadosTexto
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
