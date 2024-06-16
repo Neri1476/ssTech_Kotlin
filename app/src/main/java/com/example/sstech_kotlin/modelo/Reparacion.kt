@@ -6,7 +6,7 @@ import java.util.Date
 
 class Reparacion
 {
-    var idR: Int = 0
+    var idR: String = ""
     var correo_Cliente: String = ""
     var correo_Empleado: String = ""
     var falla: String = ""
@@ -14,7 +14,7 @@ class Reparacion
     var costo: Double = 0.0
     var estado: Boolean = false
 
-    constructor(id: Int, cliente: String, empleado: String, falla: String, plazo: Date, costo: Double, estado: Boolean)
+    constructor(id: String, cliente: String, empleado: String, falla: String, plazo: Date, costo: Double, estado: Boolean)
     {
         this.idR = id
         this.correo_Cliente = cliente
@@ -25,9 +25,19 @@ class Reparacion
         this.estado = estado
     }
 
-    fun actualizarEstado()
+    fun definirPlazo(nuevoPlazo: Date)
     {
+        this.plazo_Entrega = nuevoPlazo
+    }
 
+    fun actualizarEstado(nuevoEstado: Boolean)
+    {
+        this.estado = nuevoEstado
+    }
+
+    fun asignarEmpleado(nuevoEmpleado: String)
+    {
+        this.correo_Empleado = nuevoEmpleado
     }
 
     // Guarda reparación en una lista (cada cliente debe tener su propio historial)

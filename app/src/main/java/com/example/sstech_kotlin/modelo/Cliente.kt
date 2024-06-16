@@ -1,10 +1,12 @@
 package com.example.sstech_kotlin.modelo
 
+import android.content.Context
+import android.widget.Toast
 import java.util.Date
 
 class Cliente : Usuario {
     var fechaRegistro: String
-    var historialReparaciones: List<String>
+    var historialReparaciones: MutableList<Reparacion>
     var preferencias: String
     var dispositivosRegistrados: List<String>
     var feedback: String
@@ -20,7 +22,7 @@ class Cliente : Usuario {
         fechaRegistro: String
     ) : super(correo, contrasena, nombre, apellido, telefono, direccion) {
         this.fechaRegistro = fechaRegistro
-        this.historialReparaciones = listOf() // Inicializar con lista vacía o valor por defecto
+        this.historialReparaciones = mutableListOf() // Inicializar con lista vacía o valor por defecto
         this.preferencias = ""
         this.dispositivosRegistrados = listOf() // Inicializar con lista vacía o valor por defecto
         this.feedback = ""
@@ -44,6 +46,12 @@ class Cliente : Usuario {
         this.feedback = feedback
     }
 
+    fun agregarReparacion(reparacion: Reparacion)
+    {
+        historialReparaciones.add(reparacion)
+        Reparacion.agregarPedido(reparacion)
+    }
+
     // Guarda clientes en una lista
     companion object {
         val listaClientes = mutableListOf<Cliente>()
@@ -56,12 +64,12 @@ class Cliente : Usuario {
             return listaClientes.find { it.correo == correo && it.contrasena == contrasena }
         }
 
-        fun mostrarInformacionCliente(correo: String) {
+        fun mostrarInformacionCliente(correo: String, contexto: Context) {
             val clienteEncontrado = listaClientes.find { it.correo == correo }
             if (clienteEncontrado != null) {
                 println(clienteEncontrado)
             } else {
-                println("Cliente no encontrado.")
+                Toast.makeText(contexto, "Cliente no encontrado", Toast.LENGTH_LONG).show()
             }
         }
 
