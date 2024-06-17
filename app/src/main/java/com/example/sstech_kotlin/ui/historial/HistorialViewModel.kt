@@ -6,8 +6,13 @@ import androidx.lifecycle.ViewModel
 
 class HistorialViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "Historial de pedidos"
+    private val _historial = MutableLiveData<List<String>>().apply {
+        value = listOf() // Inicialmente vacío
     }
-    val text: LiveData<String> = _text
+    val historial: LiveData<List<String>> = _historial
+
+    // Método para agregar un pedido al historial
+    fun agregarPedido(pedido: String) {
+        _historial.value = _historial.value?.plus(pedido)
+    }
 }
