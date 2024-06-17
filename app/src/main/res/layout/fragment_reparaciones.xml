@@ -56,4 +56,3 @@
         app:layout_constraintTop_toBottomOf="@+id/btnCambiarEstado" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
