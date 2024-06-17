@@ -30,6 +30,21 @@ class Reparacion
         this.estado = estado
     }
 
+    fun definirPlazo(nuevoPlazo: Date)
+    {
+        this.plazo_Entrega = nuevoPlazo
+    }
+
+    fun actualizarEstado(nuevoEstado: Boolean)
+    {
+        this.estado = nuevoEstado
+    }
+
+    fun asignarEmpleado(nuevoEmpleado: String)
+    {
+        this.correo_Empleado = nuevoEmpleado
+    }
+
     // Guarda reparación en una lista (cada cliente debe tener su propio historial)
     companion object
     {

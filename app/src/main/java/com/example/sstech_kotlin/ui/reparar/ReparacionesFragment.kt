@@ -1,13 +1,14 @@
 package com.example.sstech_kotlin.ui.reparar
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sstech_kotlin.databinding.FragmentReparacionesBinding
+import com.example.sstech_kotlin.modelo.Reparacion
 
 class ReparacionesFragment : Fragment() {
 
@@ -18,17 +19,17 @@ class ReparacionesFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val galleryViewModel =
+    ): View {
+        val reparacionesViewModel =
             ViewModelProvider(this).get(ReparacionesViewModel::class.java)
 
         _binding = FragmentReparacionesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.lblReparaciones
-        galleryViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+        binding.recyclerViewReparaciones.layoutManager = LinearLayoutManager(context)
+        val adapter = ReparacionesAdapter(Reparacion.listaReparaciones)
+        binding.recyclerViewReparaciones.adapter = adapter
+
         return root
     }
 
