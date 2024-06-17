@@ -3,27 +3,28 @@ package com.example.sstech_kotlin.ui.reparar
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.sstech_kotlin.modelo.Empleado
 
-data class Reparacion(val descripcion: String, var estado: String)
+data class Reparacion(val descripcion: String, var estado: String, var tecnico: Empleado?)
 
 class ReparacionesViewModel : ViewModel() {
+
     private val _reparaciones = MutableLiveData<List<Reparacion>>().apply {
-        value = listOf(
-            Reparacion("Reparación de pantalla", "En proceso"),
-            Reparacion("Cambio de batería", "Pendiente"),
-            Reparacion("Reparación de teclado", "Finalizado")
-        )
+        value = emptyList()
     }
     val reparaciones: LiveData<List<Reparacion>> = _reparaciones
 
-    // Método para cambiar el estado de la reparación
-    fun cambiarEstadoReparacion() {
-        _reparaciones.value = _reparaciones.value?.map { reparacion ->
-            if (reparacion.estado == "En proceso") {
-                reparacion.copy(estado = "Finalizado")
-            } else {
-                reparacion
-            }
+    fun agregarReparacion(reparacion: Reparacion) {
+        val listaActual = _reparaciones.value.orEmpty().toMutableList()
+        listaActual.add(reparacion)
+        _reparaciones.value = listaActual.toList()
+    }
+
+    fun cambiarEstadoReparacion(index: Int, nuevoEstado: String) {
+        val listaActual = _reparaciones.value.orEmpty().toMutableList()
+        if (index in listaActual.indices) {
+            listaActual[index] = listaActual[index].copy(estado = nuevoEstado)
+            _reparaciones.value = listaActual.toList()
         }
     }
 }
