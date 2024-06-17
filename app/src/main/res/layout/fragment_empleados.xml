@@ -20,4 +20,59 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/btnAgregarEmpleado"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:background="#1E90FF"
+        android:onClick="onClick"
+        android:src="@drawable/baseline_add_box_30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblEmpleados" />
+
+    <ImageButton
+        android:id="@+id/btnBuscarEmpleado"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="68dp"
+        android:background="#D3D3D3"
+        android:onClick="onClick"
+        android:src="@drawable/baseline_search_30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblEmpleados" />
+
+
+    <ImageButton
+        android:id="@+id/btnActualizaEmpleado"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="104dp"
+        android:background="#D3D3D3"
+        android:onClick="onClick"
+        android:src="@drawable/baseline_restart_alt_30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblEmpleados" />
+
+    <ScrollView
+        android:layout_width="330dp"
+        android:layout_height="420dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnActualizaEmpleado">
+
+        <TextView
+            android:id="@+id/lblTodosComponentes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Sin empleados"
+            android:textSize="16sp" />
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

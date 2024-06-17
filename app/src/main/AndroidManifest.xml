@@ -13,6 +13,12 @@
         android:theme="@style/Theme.SsTech_Kotlin"
         tools:targetApi="31">
         <activity
+            android:name=".ui.empleado.ModificarEmpleado"
+            android:exported="false" />
+        <activity
+            android:name=".ui.empleado.RegistrarEmpleado"
+            android:exported="false" />
+        <activity
             android:name=".ui.componente.FormularioBMComponente"
             android:exported="false" />
         <activity
