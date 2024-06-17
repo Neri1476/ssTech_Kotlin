@@ -34,6 +34,7 @@ class Empleado : Usuario
         puesto: String,
         especialidad: String,
         horario: String,
+        fechaContratacion: String,
         salario: String
     )
     {
@@ -43,6 +44,7 @@ class Empleado : Usuario
         this.puesto = puesto
         this.especialidad = especialidad
         this.horario = horario
+        this.fechaContratacion = fechaContratacion
         this.salario = salario
     }
 
