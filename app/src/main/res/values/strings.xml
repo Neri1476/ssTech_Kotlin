@@ -64,4 +64,25 @@
     <string name="cantidadStockComponente">Cantidad</string>
     <string name="precioUnitarioComponente">Precio unitario</string>
     <string name="proveedorComponente">Proveedor</string>
+
+    <!--Empleado-->
+    <string name="hint_correo_empleado">Correo electrónico</string>
+    <string name="hint_nombre_empleado">Nombre</string>
+    <string name="hint_apellido_empleado">Apellido</string>
+    <string name="hint_tel_empleado">Teléfono</string>
+    <string name="hint_puesto_empleado">Puesto</string>
+    <string name="hint_esp_empleado">Especialidad</string>
+    <string name="hint_contratacion_empleado">Fecha de contratación</string>
+    <string name="hint_salario_empleado">Salario</string>
+
+    <string-array name="horario_options">
+        <item>Matutino</item>
+        <item>Vespertino</item>
+    </string-array>
+
+    <string-array name="puesto_options">
+        <item>Gerente</item>
+        <item>Tecnico</item>
+    </string-array>
+
 </resources>
