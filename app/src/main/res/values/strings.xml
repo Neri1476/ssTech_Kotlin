@@ -54,6 +54,9 @@
 
     <!--Reparaciones-->
     <string name="reparaciones">Reparaciones</string>
+    <string name="formularioBuscqueda">Buscar reparacion</string>
+    <string name="correoClienteReparacion">Correo cliente</string>
+    <string name="informacionReparacion">Sin información</string>
 
     <!--componentes-->
     <string name="componentes">Componentes</string>

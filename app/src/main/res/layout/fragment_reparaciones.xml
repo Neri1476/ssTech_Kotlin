@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.reparar.ReparacionesFragment">
 
+    <ImageButton
+        android:id="@+id/btnActualizaReparaciones"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="64dp"
+        android:background="#D3D3D3"
+        android:onClick="onClick"
+        android:src="@drawable/baseline_restart_alt_30"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblReparaciones" />
+
     <TextView
         android:id="@+id/lblReparaciones"
         android:layout_width="wrap_content"
@@ -22,37 +34,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtHistorial"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="317dp"
+        android:layout_height="510dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblReparaciones" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <Button
-        android:id="@+id/btnCambiarEstado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Cambiar Estado"
-        app:layout_constraintTop_toBottomOf="@+id/txtHistorial"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/lblTodosReparaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Sin reparaciones"
+            android:textSize="16sp" />
+    </ScrollView>
 
     <ImageButton
-        android:id="@+id/btnVolver2"
+        android:id="@+id/btnBuscarReparacion"
         android:layout_width="120dp"
         android:layout_height="60dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/back_30"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="64dp"
+        android:src="@drawable/baseline_search_30"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toStartOf="@+id/btnActualizaReparaciones"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCambiarEstado" />
+        app:layout_constraintTop_toBottomOf="@+id/lblReparaciones" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

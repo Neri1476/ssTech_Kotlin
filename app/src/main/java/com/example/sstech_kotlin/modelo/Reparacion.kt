@@ -60,14 +60,33 @@ class Reparacion
             return Reparacion.listaReparaciones.size
         }
 
-        fun mostrarReparacionCliente(context: Context, correo: String) : List<Reparacion>
-        {
+        fun mostrarReparacionCliente(context: Context, correo: String): List<Reparacion> {
             val reparacionesCliente = listaReparaciones.filter { it.correo_Cliente == correo }
-            if (reparacionesCliente.isEmpty())
-            {
+            if (reparacionesCliente.isEmpty()) {
                 Toast.makeText(context, "No hay reparaciones para este cliente", Toast.LENGTH_LONG).show()
             }
             return reparacionesCliente
+        }
+
+
+        fun buscarReparacionesPorId(id: String): Reparacion?
+        {
+            return Reparacion.listaReparaciones.find { it.idR.equals(id) }
+        }
+
+        fun obtenerTodosReparaciones(): List<Reparacion>
+        {
+            return Reparacion.listaReparaciones
+        }
+
+        fun cambiarEstadoAtrue(id: String): Boolean {
+            val reparacion = buscarReparacionesPorId(id)
+            return if (reparacion != null) {
+                reparacion.estado = true
+                true
+            } else {
+                false
+            }
         }
     }
 }

@@ -1,13 +1,20 @@
 package com.example.sstech_kotlin.ui.reparar
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.sstech_kotlin.databinding.FragmentReparacionesBinding
+import com.example.sstech_kotlin.modelo.Componente
 import com.example.sstech_kotlin.modelo.Empleado
+import com.example.sstech_kotlin.modelo.Reparacion
+import com.example.sstech_kotlin.ui.componente.ComponentesViewModel
+import com.example.sstech_kotlin.ui.empleado.RegistrarEmpleado
 
 class ReparacionesFragment : Fragment() {
 
@@ -20,35 +27,45 @@ class ReparacionesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val reparacionesViewModel = ViewModelProvider(this).get(ReparacionesViewModel::class.java)
+
         _binding = FragmentReparacionesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        txtHistorial = binding.txtHistorial
+        txtHistorial = binding.lblReparaciones
+
+        val textView: TextView = binding.lblReparaciones
+        reparacionesViewModel.text.observe(viewLifecycleOwner) {
+            textView.text = it
+        }
+
+        val btnBuscarComponente: ImageButton = binding.btnBuscarReparacion
+        btnBuscarComponente.setOnClickListener {
+            cargarVentanBuscarReparaciones()
+        }
+
+        val btnActualizarComponentes: ImageButton = binding.btnActualizaReparaciones
+        btnActualizarComponentes.setOnClickListener {
+            mostrarTodasReparaciones()
+        }
 
         mostrarTodasReparaciones()
 
         return root
     }
 
+    private fun cargarVentanBuscarReparaciones() {
+        val intent = Intent(activity, BuscarReparacion::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        startActivity(intent)
+    }
+
     private fun mostrarTodasReparaciones() {
-        val empleados = Empleado.obtenerTodosTecnicos()
-        val reparacionesTexto = StringBuilder()
-
-        for (empleado in empleados) {
-            reparacionesTexto.append("Técnico: ${empleado.nombre}\n")
-            reparacionesTexto.append("Correo: ${empleado.correo}\n")
-            reparacionesTexto.append("Puesto: ${empleado.puesto}\n")
-            reparacionesTexto.append("Especialidad: ${empleado.especialidad}\n")
-            reparacionesTexto.append("Horario: ${empleado.horario}\n")
-            reparacionesTexto.append("Fecha Contratación: ${empleado.fechaContratacion}\n")
-            reparacionesTexto.append("Salario: ${empleado.salario}\n\n")
+        val reparaciones = Reparacion.obtenerTodosReparaciones()
+        val reaparacionesTexto = reparaciones.joinToString(separator = "\n") {
+            "ID: ${it.idR}\nCliente: ${it.correo_Cliente}\nEmpleado: ${it.correo_Empleado}\nFalla: ${it.falla}\nPlazo de Entrega: ${it.plazo_Entrega}\nEstado: ${it.estado}\n\n"
         }
-
-        if (reparacionesTexto.isEmpty()) {
-            txtHistorial.text = "No hay técnicos registrados."
-        } else {
-            txtHistorial.text = reparacionesTexto.toString().trim()
-        }
+        txtHistorial.text = reaparacionesTexto
     }
 
     override fun onDestroyView() {
