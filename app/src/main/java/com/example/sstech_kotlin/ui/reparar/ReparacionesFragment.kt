@@ -6,46 +6,49 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.example.sstech_kotlin.databinding.FragmentReparacionesBinding
+import com.example.sstech_kotlin.modelo.Empleado
 
 class ReparacionesFragment : Fragment() {
 
     private var _binding: FragmentReparacionesBinding? = null
     private val binding get() = _binding!!
-    private lateinit var reparacionesViewModel: ReparacionesViewModel
+    private lateinit var txtHistorial: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        reparacionesViewModel = ViewModelProvider(this).get(ReparacionesViewModel::class.java)
-
         _binding = FragmentReparacionesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        // Observamos las reparaciones
-        reparacionesViewModel.reparaciones.observe(viewLifecycleOwner) { reparaciones ->
-            val reparacionesText = reparaciones.joinToString(separator = "\n\n") { reparacion ->
-                "${reparacion.descripcion} - ${reparacion.estado}"
-            }
-            binding.txtHistorial.text = reparacionesText
-        }
+        txtHistorial = binding.txtHistorial
 
-        // Configuramos el botón de cambiar estado
-        binding.btnCambiarEstado.setOnClickListener {
-            reparacionesViewModel.cambiarEstadoReparacion()
-        }
-
-        // Configuramos el botón de regresar
-        binding.btnVolver2.setOnClickListener {
-            // Navegar a la pantalla anterior
-            // Por ejemplo, si estás usando Navigation Component:
-            // findNavController().navigateUp()
-        }
+        mostrarTodasReparaciones()
 
         return root
+    }
+
+    private fun mostrarTodasReparaciones() {
+        val empleados = Empleado.obtenerTodosTecnicos()
+        val reparacionesTexto = StringBuilder()
+
+        for (empleado in empleados) {
+            reparacionesTexto.append("Técnico: ${empleado.nombre}\n")
+            reparacionesTexto.append("Correo: ${empleado.correo}\n")
+            reparacionesTexto.append("Puesto: ${empleado.puesto}\n")
+            reparacionesTexto.append("Especialidad: ${empleado.especialidad}\n")
+            reparacionesTexto.append("Horario: ${empleado.horario}\n")
+            reparacionesTexto.append("Fecha Contratación: ${empleado.fechaContratacion}\n")
+            reparacionesTexto.append("Salario: ${empleado.salario}\n\n")
+        }
+
+        if (reparacionesTexto.isEmpty()) {
+            txtHistorial.text = "No hay técnicos registrados."
+        } else {
+            txtHistorial.text = reparacionesTexto.toString().trim()
+        }
     }
 
     override fun onDestroyView() {
