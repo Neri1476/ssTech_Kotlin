@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnActualizaEmpleado">
 
         <TextView
-            android:id="@+id/lblTodosComponentes"
+            android:id="@+id/lblTodosEmpleados"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"

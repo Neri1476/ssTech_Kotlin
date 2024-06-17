@@ -7,4 +7,184 @@
     android:layout_height="match_parent"
     tools:context=".ui.empleado.ModificarEmpleado">
 
+    <TextView
+        android:id="@+id/lblModificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Modificar Empleado"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCorreoEmpleado"
+        android:layout_width="309dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Correo Electrónico"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblModificar" />
+
+    <EditText
+        android:id="@+id/txtNombreEmpleado"
+        android:layout_width="304dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/txtApellidoEmpleado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreoEmpleado" />
+
+    <EditText
+        android:id="@+id/txtApellidoEmpleado"
+        android:layout_width="291dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Apellido"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreEmpleado" />
+
+    <EditText
+        android:id="@+id/txtTelEmpleado"
+        android:layout_width="297dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Teléfono"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerPuestoEmpleado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtApellidoEmpleado" />
+
+    <Spinner
+        android:id="@+id/spinnerPuestoEmpleado"
+        android:layout_width="297dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTelEmpleado" />
+
+    <EditText
+        android:id="@+id/txtEspEmpleado"
+        android:layout_width="298dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Especialidad"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerPuestoEmpleado" />
+
+    <Spinner
+        android:id="@+id/spinnerHorarioEmpleado"
+        android:layout_width="298dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEspEmpleado" />
+
+    <EditText
+        android:id="@+id/txtContratacionEmpleado"
+        android:layout_width="305dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Fecha de Contratación"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerHorarioEmpleado" />
+
+    <EditText
+        android:id="@+id/txtSalarioEmpleado"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Salario"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtContratacionEmpleado" />
+
+    <ImageButton
+        android:id="@+id/btnConsultarEmpleado"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="#1E90FF"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnModificarEmpleado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSalarioEmpleado"
+        app:layout_constraintVertical_bias="0.179"
+        app:srcCompat="@drawable/baseline_search_30" />
+
+    <ImageButton
+        android:id="@+id/btnModificarEmpleado"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="15dp"
+        android:background="#1E90FF"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegresar"
+        app:layout_constraintStart_toEndOf="@+id/btnConsultarEmpleado"
+        app:layout_constraintTop_toBottomOf="@+id/txtSalarioEmpleado"
+        app:layout_constraintVertical_bias="0.181"
+        app:srcCompat="@drawable/baseline_edit_30" />
+
+    <ImageButton
+        android:id="@+id/btnRegresar"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="#D3D3D3"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnModificarEmpleado"
+        app:layout_constraintTop_toBottomOf="@+id/txtSalarioEmpleado"
+        app:layout_constraintVertical_bias="0.179"
+        app:srcCompat="@drawable/back_30" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
