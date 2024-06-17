@@ -57,6 +57,11 @@ class Empleado : Usuario
             Empleado.listaEmpleados.add(empleado)
         }
 
+        fun obtenerCorreosEmpleados(): List<String>
+        {
+            return listaEmpleados.map { it.correo }
+        }
+
         fun encontrarEmpleado(correo: String): Empleado?
         {
             return listaEmpleados.find { it.correo == correo }
