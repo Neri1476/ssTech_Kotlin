@@ -45,6 +45,11 @@ class Reparacion
         this.correo_Empleado = nuevoEmpleado
     }
 
+    fun obtenerEstadoComoTexto(): String
+    {
+        return if (estado) "Terminado" else "En proceso"
+    }
+
     // Guarda reparación en una lista (cada cliente debe tener su propio historial)
     companion object
     {
@@ -55,7 +60,7 @@ class Reparacion
             listaReparaciones.add(reparacion)
         }
 
-        fun logitudReparacion() : Int
+        fun longitudReparacion() : Int
         {
             return Reparacion.listaReparaciones.size
         }
