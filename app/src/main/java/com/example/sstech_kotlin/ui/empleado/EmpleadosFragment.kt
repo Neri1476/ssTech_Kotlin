@@ -71,8 +71,9 @@ class EmpleadosFragment : Fragment() {
 
     private fun mostrarTodosEmpleados() {
         val empleados = Empleado.listaEmpleados
+
         val empleadosTexto = empleados.joinToString(separator = "\n") {
-            "Correo: ${it.correo}\nNombre: ${it.nombre} ${it.apellido}\nTeléfono: ${it.telefono}\nPuesto: ${it.puesto}\nEspecialidad: ${it.especialidad}\nHorario: ${it.horario}\nFecha de Contratación: ${it.fechaContratacion}\nSalario: ${it.salario}\n\n"
+            "Correo: ${it.correo}\nNombre: ${it.nombre}\nApellido: ${it.apellido}\nTeléfono: ${it.telefono}\nPuesto: ${it.puesto}\nEspecialidad: ${it.especialidad}\nHorario: ${it.horario}\nFecha de Contratación: ${it.fechaContratacion}\nSalario: ${it.salario}\n\n"
         }
         resultadoEmpleados.text = empleadosTexto
     }

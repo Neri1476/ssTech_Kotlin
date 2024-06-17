@@ -1,6 +1,7 @@
 package com.example.sstech_kotlin.ui.empleado
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -59,6 +60,15 @@ class RegistrarEmpleado : AppCompatActivity() {
 
     private fun registrar() {
         if (camposCompletos()) {
+            Log.d("RegistrarEmpleado", "Correo: ${correo.text.toString()}")
+            Log.d("RegistrarEmpleado", "Nombre: ${nombre.text.toString()}")
+            Log.d("RegistrarEmpleado", "Apellido: ${apellido.text.toString()}")
+            Log.d("RegistrarEmpleado", "Teléfono: ${telefono.text.toString()}")
+            Log.d("RegistrarEmpleado", "Puesto: ${puesto.selectedItem.toString()}")
+            Log.d("RegistrarEmpleado", "Especialidad: ${especialidad.text.toString()}")
+            Log.d("RegistrarEmpleado", "Horario: ${horario.selectedItem.toString()}")
+            Log.d("RegistrarEmpleado", "Fecha Contratación: ${fechaContratacion.text.toString()}")
+            Log.d("RegistrarEmpleado", "Salario: ${salario.text.toString()}")
             val nuevoEmpleado = Empleado(
                 correo.text.toString(),
                 nombre.text.toString(),
@@ -70,6 +80,8 @@ class RegistrarEmpleado : AppCompatActivity() {
                 fechaContratacion.text.toString(),
                 salario.text.toString()
             )
+            println(nuevoEmpleado.toStrings())
+            println("Printed")
             Empleado.agregarEmpleado(nuevoEmpleado)
             Toast.makeText(
                 this, "Empleado registrado con éxito", Toast.LENGTH_SHORT

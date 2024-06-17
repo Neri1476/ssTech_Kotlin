@@ -68,6 +68,7 @@ class ModificarEmpleado : AppCompatActivity() {
             val empleadoConsultado = Empleado.encontrarEmpleado(correo.text.toString())
 
             if (empleadoConsultado != null) {
+                println(empleadoConsultado.telefono)
                 nombre.setText(empleadoConsultado.nombre)
                 apellido.setText(empleadoConsultado.apellido)
                 telefono.setText(empleadoConsultado.telefono)
@@ -105,6 +106,7 @@ class ModificarEmpleado : AppCompatActivity() {
                     puesto.selectedItem.toString(),
                     especialidad.text.toString(),
                     horario.selectedItem.toString(),
+                    fechaContratacion.text.toString(),
                     salario.text.toString()
                 )
 
