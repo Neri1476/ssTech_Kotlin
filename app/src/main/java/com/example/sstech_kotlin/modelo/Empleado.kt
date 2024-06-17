@@ -18,7 +18,7 @@ class Empleado : Usuario
         horario: String,
         fechaContratacion: String,
         salario: String
-    ) : super(correo, nombre, apellido, telefono)
+    ) : super(correo,nombre,nombre,apellido, telefono)
     {
         this.puesto = puesto
         this.especialidad = especialidad
@@ -63,5 +63,19 @@ class Empleado : Usuario
         fun obtenerTodosTecnicos(): List<Empleado> {
             return Empleado.listaEmpleados
         }
+    }
+
+    fun toStrings(): String {
+        return "Empleado: { " +
+                "correo='$correo', " +
+                "nombre='$nombre', " +
+                "apellido='$apellido', " +
+                "telefono='$telefono', " +
+                "puesto='$puesto', " +
+                "especialidad='$especialidad', " +
+                "horario='$horario', " +
+                "fechaContratacion='$fechaContratacion', " +
+                "salario='$salario' " +
+                "}"
     }
 }
