@@ -106,6 +106,7 @@ class ModificarEmpleado : AppCompatActivity() {
                     puesto.selectedItem.toString(),
                     especialidad.text.toString(),
                     horario.selectedItem.toString(),
+                    fechaContratacion.text.toString(),
                     salario.text.toString()
                 )
 
